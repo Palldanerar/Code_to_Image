@@ -80,6 +80,11 @@ const CodeEditor = ({ language, icon, theme, background, currentPadding }: CodeE
                 background: background,
             }}>
             <div className='code-block' style={{ padding: currentPadding }}>
+                <div className="handle handle-top absolute left-1/2 translate-x-[-50%] top-[-4px] w-2 h-2 rounded-full bg-slate-300 hover:bg-slate-50"></div>
+                <div className="handle handle-bottom absolute left-1/2 bottom-[-4px] w-2 h-2 rounded-full bg-slate-300 hover:bg-slate-50"></div>
+                <div className="handle handle-left absolute left-[-4px] top-1/2 w-2 h-2 rounded-full bg-slate-300 hover:bg-slate-50"></div>
+                <div className="handle handle-right absolute right-[-4px] top-1/2 w-2 h-2 rounded-full bg-slate-300 hover:bg-slate-50"></div>
+
                 <div className='code-title h-[52px] px-4 flex items-center justify-between bg-black bg-opacity-80"'>
                     {/* Apple Style) */}
                     <div className='dots flex items-center gap-1'>
@@ -96,7 +101,7 @@ const CodeEditor = ({ language, icon, theme, background, currentPadding }: CodeE
                 </div>
                 <AceEditor
                     value={code}
-                    name="UNIQUE_ID_OF_DIV"
+                    name="editor"
                     fontSize={16}
                     wrapEnabled={true}
                     showPrintMargin={false}
